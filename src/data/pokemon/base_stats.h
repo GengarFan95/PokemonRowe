@@ -11255,7 +11255,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 95,
         .baseSpDefense = 79,
         .type1 = TYPE_ELECTRIC,
-        .type2 = TYPE_ELECTRIC,
+        .type2 = TYPE_DARK,
         .catchRate = 45,
         .expYield = 235,
         .evYield_Attack    = 3,
@@ -15380,8 +15380,13 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 30,
         .baseSpAttack  = 70,
         .baseSpDefense = 50,
-        .type1 = TYPE_GRASS,
-        .type2 = TYPE_GRASS,
+        #if P_UPDATED_TYPES >= GEN_6
+            .type1 = TYPE_GRASS,
+            .type2 = TYPE_FAIRY,
+        #else
+            .type1 = TYPE_GRASS,
+            .type2 = TYPE_GRASS,
+        #endif
         .catchRate = 190,
         .expYield = 56,
         .evYield_SpAttack  = 1,
@@ -15408,8 +15413,13 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 110,
         .baseSpDefense = 75,
-        .type1 = TYPE_GRASS,
-        .type2 = TYPE_GRASS,
+        #if P_UPDATED_TYPES >= GEN_6
+            .type1 = TYPE_GRASS,
+            .type2 = TYPE_FAIRY,
+        #else
+            .type1 = TYPE_GRASS,
+            .type2 = TYPE_GRASS,
+        #endif
         .catchRate = 75,
         .expYield = 168,
         .evYield_SpAttack  = 2,
@@ -42180,7 +42190,7 @@ const struct BaseStats gVanillaBaseStats[] =
             .baseSpAttack  = 80,
         #endif
         .type1 = TYPE_BUG,
-        .type2 = TYPE_FLYING,
+        .type2 = TYPE_WATER,
         .catchRate = 75,
         .expYield = 159,
         .evYield_SpAttack  = 1,
