@@ -13987,6 +13987,7 @@ static const struct LevelUpMove sLilligantLevelUpLearnset[] = {
     LEVEL_UP_MOVE(28, MOVE_QUIVER_DANCE),
     LEVEL_UP_MOVE(46, MOVE_PETAL_DANCE),
     LEVEL_UP_MOVE(50, MOVE_PETAL_BLIZZARD),
+    LEVEL_UP_MOVE(56, MOVE_MOONBLAST),
     LEVEL_UP_END
 };
 
