@@ -2653,7 +2653,7 @@ static const u8 sMachampTMHMLearnset[] =
     TMHM(TM88_SLEEP_TALK),
     TMHM(TM90_SUBSTITUTE),
     TMHM(TM100_CONFIDE),
-	TMHM(TM119_DRAIN_PUNCH),//++
+    TMHM(TM119_DRAIN_PUNCH),
     0xFF,
 };
 
@@ -18752,6 +18752,7 @@ static const u8 sElectivireTMHMLearnset[] =
     TMHM(TM90_SUBSTITUTE),
     TMHM(TM93_WILD_CHARGE),
     TMHM(TM100_CONFIDE),
+    TMHM(TM119_DRAIN_PUNCH),
     0xFF,
 };
 
@@ -19240,6 +19241,7 @@ static const u8 sDusknoirTMHMLearnset[] =
     TMHM(TM92_TRICK_ROOM),
     TMHM(TM97_DARK_PULSE),
     TMHM(TM100_CONFIDE),
+    TMHM(TM119_DRAIN_PUNCH),
     0xFF,
 };
 
