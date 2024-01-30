@@ -7937,7 +7937,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpDefense = 82,
         .baseSpeed     = 80,
         .type1 = TYPE_BUG,
-        .type2 = TYPE_FLYING,
+        .type2 = TYPE_WATER,
         .catchRate = 75,
         .expYield = 159,
         .evYield_SpAttack  = 1,
@@ -7953,6 +7953,7 @@ const struct BaseStats gBaseStats[] =
         .abilityHidden = ABILITY_AIR_CURRENT,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
+		.flags = F_GROUND_INMUNITY,
     },
 
     [SPECIES_SHROOMISH] =
@@ -15842,7 +15843,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 95,
         .baseSpDefense = 105,
         .type1 = TYPE_GHOST,
-        .type2 = TYPE_GHOST,
+        .type2 = TYPE_STEEL,
         .catchRate = 90,
         .expYield = 169,
         .evYield_Defense   = 2,
@@ -16190,7 +16191,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 75,
         .baseSpDefense = 85,
         .type1 = TYPE_PSYCHIC,
-        .type2 = TYPE_PSYCHIC,
+        .type2 = TYPE_DARK,
         .catchRate = 100,
         .expYield = 137,
         .evYield_SpDefense = 2,
@@ -16220,7 +16221,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 95,
         .baseSpDefense = 110,
         .type1 = TYPE_PSYCHIC,
-        .type2 = TYPE_PSYCHIC,
+        .type2 = TYPE_DARK,
         .catchRate = 50,
         .expYield = 221,
         .evYield_SpDefense = 3,
@@ -17309,7 +17310,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpDefense = 70,
         .baseSpeed     = 95, // 50 -> 95
         .type1 = TYPE_ICE,
-        .type2 = TYPE_ICE,
+        .type2 = TYPE_FIGHTING,
         .catchRate = 60,
         .expYield = 200,
         .evYield_Attack    = 2,
@@ -17335,7 +17336,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpDefense = 135,
         .baseSpeed     = 105,
         .type1 = TYPE_ICE,
-        .type2 = TYPE_ICE,
+        .type2 = TYPE_STEEL,
         .catchRate = 25,
         .expYield = 180,
         .evYield_SpDefense = 2,
@@ -18781,10 +18782,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_LITLEO] =
     {
         .baseHP        = 62,
-        .baseAttack    = 50,
+        .baseAttack    = 73,// 50 -> 73
         .baseDefense   = 58,
         .baseSpeed     = 72,
-        .baseSpAttack  = 73,
+        .baseSpAttack  = 50,// 73 -> 50
         .baseSpDefense = 54,
         .type1 = TYPE_FIRE,
         .type2 = TYPE_NORMAL,
@@ -18810,10 +18811,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_PYROAR] =
     {
         .baseHP        = 86,
-        .baseAttack    = 68,
+        .baseAttack    = 112,// 68 -> 112
         .baseDefense   = 72,
         .baseSpeed     = 106,
-        .baseSpAttack  = 109,
+        .baseSpAttack  = 68,// 109 -> 68
         .baseSpDefense = 66,
         .type1 = TYPE_FIRE,
         .type2 = TYPE_NORMAL,
@@ -18856,10 +18857,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_FAIRY,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_FLOWER_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_NATURAL_CURE, ABILITY_FLOWER_VEIL},
             .abilityHidden = ABILITY_SYMBIOSIS,
         #else
-            .abilities = {ABILITY_NONE, ABILITY_NONE},
+            .abilities = {ABILITY_NATURAL_CURE, ABILITY_NONE},
         #endif
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
@@ -18885,10 +18886,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_FAIRY,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_FLOWER_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_NATURAL_CURE, ABILITY_FLOWER_VEIL},
             .abilityHidden = ABILITY_SYMBIOSIS,
         #else
-            .abilities = {ABILITY_NONE, ABILITY_NONE},
+            .abilities = {ABILITY_NATURAL_CURE, ABILITY_NONE},
         #endif
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
@@ -18914,10 +18915,10 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_FAIRY,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_FLOWER_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_NATURAL_CURE, ABILITY_FLOWER_VEIL},
             .abilityHidden = ABILITY_SYMBIOSIS,
         #else
-            .abilities = {ABILITY_NONE, ABILITY_NONE},
+            .abilities = {ABILITY_NATURAL_CURE, ABILITY_NONE},
         #endif
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
@@ -42200,7 +42201,7 @@ const struct BaseStats gVanillaBaseStats[] =
             .baseSpAttack  = 80,
         #endif
         .type1 = TYPE_BUG,
-        .type2 = TYPE_WATER,
+        .type2 = TYPE_FLYING,
         .catchRate = 75,
         .expYield = 159,
         .evYield_SpAttack  = 1,
