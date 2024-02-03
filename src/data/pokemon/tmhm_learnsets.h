@@ -2238,6 +2238,7 @@ static const u8 sGrowlitheTMHMLearnset[] =
     TMHM(TM95_SNARL),
     TMHM(TM100_CONFIDE),
     TMHM(TM104_PLAY_ROUGH),
+    TMHM(TM117_BLAZE_KICK),
     0xFF,
 };
 
@@ -2276,6 +2277,7 @@ static const u8 sArcanineTMHMLearnset[] =
     TMHM(TM95_SNARL),
     TMHM(TM100_CONFIDE),
     TMHM(TM104_PLAY_ROUGH),
+    TMHM(TM117_BLAZE_KICK),
     0xFF,
 };
 
@@ -3456,6 +3458,7 @@ static const u8 sDoduoTMHMLearnset[] =
     TMHM(TM76_FLY),
     TMHM(TM87_SWAGGER),
     TMHM(TM88_SLEEP_TALK),
+    TMHM(TM89_U_TURN),
     TMHM(TM90_SUBSTITUTE),
     TMHM(TM100_CONFIDE),
     TMHM(TM114_BRAVE_BIRD),
@@ -3490,6 +3493,7 @@ static const u8 sDodrioTMHMLearnset[] =
     TMHM(TM76_FLY),
     TMHM(TM87_SWAGGER),
     TMHM(TM88_SLEEP_TALK),
+    TMHM(TM89_U_TURN),
     TMHM(TM90_SUBSTITUTE),
     TMHM(TM100_CONFIDE),
     TMHM(TM114_BRAVE_BIRD),
@@ -9668,6 +9672,7 @@ static const u8 sHitmontopTMHMLearnset[] =
     TMHM(TM80_ROCK_SLIDE),
     TMHM(TM87_SWAGGER),
     TMHM(TM88_SLEEP_TALK),
+    TMHM(TM89_U_TURN),
     TMHM(TM90_SUBSTITUTE),
     TMHM(TM100_CONFIDE),
     0xFF,
@@ -27019,6 +27024,7 @@ static const u8 sPyroarTMHMLearnset[] =
     TMHM(TM21_FRUSTRATION),
     TMHM(TM22_SOLARBEAM),
     TMHM(TM23_IRON_TAIL),
+    TMHM(TM26_EARTHQUAKE),
     TMHM(TM27_RETURN),
     TMHM(TM28_DIG),
     TMHM(TM32_DOUBLE_TEAM),
