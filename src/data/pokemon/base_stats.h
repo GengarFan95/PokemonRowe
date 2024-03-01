@@ -296,11 +296,11 @@ const struct BaseStats gBaseStats[] =
         .baseHP        = 60,
         .baseAttack    = 45,
         .baseDefense   = 50,
-        .baseSpeed     = 80,// 70-> 80
+        .baseSpeed     = 80,//70 -> 80
         .baseSpDefense = 80,
-        .baseSpAttack  = 95,// 90 -> 95
+        .baseSpAttack  = 95,//90 -> 95
         .type1 = TYPE_BUG,
-        .type2 = TYPE_FLYING,
+        .type2 = TYPE_PSYCHIC,
         .catchRate = 45,
         .expYield = 178,
         .evYield_SpAttack  = 2,
@@ -1556,10 +1556,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_GOLDUCK] =
     {
         .baseHP        = 80,
-        .baseAttack    = 82,
+        .baseAttack    = 102,//82 -> 102
         .baseDefense   = 78,
-        .baseSpeed     = 100, // 85 -> 100
-        .baseSpAttack  = 100,// 95 -> 100
+        .baseSpeed     = 100,//85 -> 100
+        .baseSpAttack  = 100,//95 -> 100
         .baseSpDefense = 80,
         .type1 = TYPE_WATER,
         .type2 = TYPE_PSYCHIC,
@@ -1631,7 +1631,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         #ifdef BATTLE_ENGINE
             .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_ANGER_POINT},
-            .abilityHidden = ABILITY_POSSESSED, // Defiant -> Gorilla Tactics
+            .abilityHidden = ABILITY_POSSESSED, // Defiant -> Possessed
         #else
             .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_NONE},
         #endif
@@ -2185,7 +2185,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_FLASH_FIRE},
-        .abilityHidden = ABILITY_FLAME_BODY,
+        #ifdef BATTLE_ENGINE
+            .abilityHidden = ABILITY_STRIKER,
+        #else
+            .abilityHidden = ABILITY_FLAME_BODY,
+        #endif
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -2212,7 +2216,11 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RECKLESS, ABILITY_FLASH_FIRE},// Run Away -> Reckless
-        .abilityHidden = ABILITY_FLAME_BODY,
+        #ifdef BATTLE_ENGINE
+            .abilityHidden = ABILITY_STRIKER,
+        #else
+            .abilityHidden = ABILITY_FLAME_BODY,
+        #endif
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -7486,8 +7494,10 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
-        .abilities = {ABILITY_SWARM, ABILITY_RIVALRY},
-        .abilityHidden = ABILITY_HONEY_GATHER,
+        .abilities = {ABILITY_SWARM, ABILITY_HONEY_GATHER},
+        #ifdef BATTLE_ENGINE
+            .abilityHidden = ABILITY_EARLY_EVOLVER,
+        #endif
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -13266,7 +13276,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 135,
         .baseSpDefense = 75,
         .type1 = TYPE_NORMAL,
-        .type2 = TYPE_NORMAL,
+        .type2 = TYPE_ELECTRIC,
         .catchRate = 30,
         .expYield = 241,
         .evYield_SpAttack  = 3,
