@@ -23473,8 +23473,8 @@ const struct BaseStats gBaseStats[] =
         .baseAttack    = 40,
         .baseDefense   = 60,
         .baseSpeed     = 10,
-        .baseSpAttack  = 40,
-        .baseSpDefense = 60,
+        .baseSpAttack  = 60,//40 -> 60
+        .baseSpDefense = 70,//60 -> 70
         .type1 = TYPE_GRASS,
         .type2 = TYPE_GRASS,
         .catchRate = 190,
@@ -23498,14 +23498,14 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_ELDEGOSS] =
     {
-        .baseHP        = 60,
+        .baseHP        = 80,// 60 -> 80
         .baseAttack    = 50,
         .baseDefense   = 90,
         .baseSpeed     = 60,
-        .baseSpAttack  = 80,
+        .baseSpAttack  = 100,//80 -> 100
         .baseSpDefense = 120,
         .type1 = TYPE_GRASS,
-        .type2 = TYPE_GRASS,
+        .type2 = TYPE_ELECTRIC,
         .catchRate = 75,
         .expYield = 161,
         .evYield_SpDefense = 2,
@@ -23518,7 +23518,7 @@ const struct BaseStats gBaseStats[] =
         #ifdef BATTLE_ENGINE
             .abilities = {ABILITY_COTTON_DOWN, ABILITY_REGENERATOR},
         #else
-            .abilities = {ABILITY_NONE, ABILITY_NONE},
+            .abilities = {ABILITY_EFFECT_SPORE, ABILITY_NONE},
         #endif
         .abilityHidden = ABILITY_EFFECT_SPORE,
         .bodyColor = BODY_COLOR_GREEN,
@@ -23731,11 +23731,11 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_CARKOL] =
     {
         .baseHP        = 80,
-        .baseAttack    = 60,
+        .baseAttack    = 80,//60 -> 80
         .baseDefense   = 90,
         .baseSpeed     = 50,
         .baseSpAttack  = 60,
-        .baseSpDefense = 70,
+        .baseSpDefense = 80,//70 -> 80
         .type1 = TYPE_ROCK,
         .type2 = TYPE_FIRE,
         .catchRate = 120,
@@ -23760,10 +23760,10 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_COALOSSAL] =
     {
         .baseHP        = 110,
-        .baseAttack    = 80,
+        .baseAttack    = 110,//80 -> 110
         .baseDefense   = 120,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 80,
+        .baseSpeed     = 60,// 30 -> 60
+        .baseSpAttack  = 70,// 80 -> 70
         .baseSpDefense = 90,
         .type1 = TYPE_ROCK,
         .type2 = TYPE_FIRE,
@@ -24602,7 +24602,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -24631,7 +24631,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -33543,7 +33543,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -33572,7 +33572,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -33601,7 +33601,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -33630,7 +33630,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -33659,7 +33659,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -33688,7 +33688,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -33717,7 +33717,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -33746,7 +33746,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_SWEET_VEIL, ABILITY_NONE},
+            .abilities = {ABILITY_SWEET_VEIL, ABILITY_REGENERATOR},
             .abilityHidden = ABILITY_AROMA_VEIL,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
