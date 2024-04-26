@@ -17683,6 +17683,7 @@ static const u8 sGossifleurTutorLearnset[] =
 
 static const u8 sEldegossTutorLearnset[] =
 {
+    TUTOR(MOVE_THUNDER_WAVE),
     TUTOR(MOVE_SUBSTITUTE),
     TUTOR(MOVE_SNORE),
     TUTOR(MOVE_ENDURE),
